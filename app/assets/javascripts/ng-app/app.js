@@ -10,39 +10,35 @@ angular
 
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
         function ($stateProvider, $urlRouterProvider, $locationProvider ) {
-     /**
-     * Routes and States
-     */
+
     $stateProvider
-        .state('home', {
-            url: '/',
-            templateUrl: 'home.html',
-            controller: 'HomeCtrl'
-        })
         .state('dashboard', {
             abstract: true,
             url: '/dashboard',
-            templateUrl: 'dashboard/layout.html'
+            templateUrl: 'dashboard/layout.html',
+            controller: 'LayoutCtrl'
         })
             // the default route when someone hits dashboard
-            .state('dashboard.one', {
+            .state('dashboard.people', {
                 url: '',
-                templateUrl: 'dashboard/one.html'
+                templateUrl: 'dashboard/people.html',
+                controller: 'PeopleCtrl'
             })
-            // this is /dashboard/two
-            .state('dashboard.two', {
-                url: '/two',
-                templateUrl: 'dashboard/two.html'
+        
+            .state('dashboard.person_detail', {
+                url: '/person_detail',
+                templateUrl: 'dashboard/person_detail.html',
+                controller: 'PersonDetailCtrl'
             })
-            // this is /dashboard/three
-            .state('dashboard.three', {
-                url: '/three',
-                templateUrl: 'dashboard/three.html'
-            });
+
+            .state('dashboard.person_info', {
+                url: '/person_info',
+                templateUrl: 'dashboard/person_info.html',
+                controller: 'PersonInfoCtrl'
+            })
+
 
     // default fall back route
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/dashboard');
 
-    // enable HTML5 Mode for SEO
-    // $locationProvider.html5Mode(true);
 }]);
