@@ -42,6 +42,4 @@ var app = angular
     $urlRouterProvider.otherwise('/dashboard');
 
 }]);
-app.run(function ($rootScope) {
-    $rootScope.fate= "There are 21 million human trafficking victims"; //global variable
-});
+
