@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  country: MyString
+  code: 1
+  abbreviation: MyString
+  tier: MyString
+
+two:
+  type: 
+  country: MyString
+  code: 1
+  abbreviation: MyString
+  tier: MyString

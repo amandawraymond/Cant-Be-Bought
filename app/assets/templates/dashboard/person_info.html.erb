@@ -1,3 +1,9 @@
 <h2>Get Person Info</h2>
 
 <p>Are you Adult, Child, Male, Female?</p>
+
+<ul class="list-inline">
+  <li ng-repeat="personType in personTypes">
+    <button class="btn btn-default" ng-click="changeScreen(personType);">{{personType}}</button>
+  </li>
+</ul>
