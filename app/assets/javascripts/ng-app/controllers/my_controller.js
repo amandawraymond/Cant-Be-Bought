@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .controller('myCtrl', function ($scope, $state, personService) {
+    .controller('myCtrl', function ($scope, $state, $rootScope, personService) {
    
     $scope.personTypes = personService.personTypes;       
     
@@ -15,4 +15,15 @@ angular.module('myApp')
       $state.go('dashboard.person_detail');
     };
 
+    $rootScope.fate = "Fate is based on statistics from resources listed below";
+    $scope.revealFate = function() {
+      $rootScope.fate = personService.createFate();
+
+    };
+  
+
+
+
+
 });
+

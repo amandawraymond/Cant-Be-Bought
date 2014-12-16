@@ -1,4 +1,4 @@
-angular
+var app = angular
     .module('myApp', [
         'ngAnimate',
         'ngSanitize',
@@ -33,7 +33,7 @@ angular
                 url: '/person_detail',
                 templateUrl: 'dashboard/person_detail.html',
                 controller: 'myCtrl'
-            })
+            });
 
 
 
@@ -42,3 +42,6 @@ angular
     $urlRouterProvider.otherwise('/dashboard');
 
 }]);
+app.run(function ($rootScope) {
+    $rootScope.fate= "There are 21 million human trafficking victims"; //global variable
+});
