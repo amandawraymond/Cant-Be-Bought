@@ -1,4 +1,4 @@
-angular
+var app = angular
     .module('myApp', [
         'ngAnimate',
         'ngSanitize',
@@ -16,29 +16,32 @@ angular
             abstract: true,
             url: '/dashboard',
             templateUrl: 'dashboard/layout.html',
-            controller: 'LayoutCtrl'
+            controller: 'myCtrl'
         })
             // the default route when someone hits dashboard
             .state('dashboard.people', {
                 url: '',
                 templateUrl: 'dashboard/people.html',
-                controller: 'PeopleCtrl'
+                controller: 'myCtrl'
             })
-        
-            .state('dashboard.person_detail', {
-                url: '/person_detail',
-                templateUrl: 'dashboard/person_detail.html',
-                controller: 'PersonDetailCtrl'
-            })
-
             .state('dashboard.person_info', {
                 url: '/person_info',
                 templateUrl: 'dashboard/person_info.html',
-                controller: 'PersonInfoCtrl'
+                controller: 'myCtrl'
             })
+            .state('dashboard.person_detail', {
+                url: '/person_detail',
+                templateUrl: 'dashboard/person_detail.html',
+                controller: 'myCtrl'
+            });
+
+
 
 
     // default fall back route
     $urlRouterProvider.otherwise('/dashboard');
 
 }]);
+app.run(function ($rootScope) {
+    $rootScope.fate= "There are 21 million human trafficking victims"; //global variable
+});

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
 //= require angular
 //= require angular-bootstrap
 //= require angular-animate/angular-animate.js
