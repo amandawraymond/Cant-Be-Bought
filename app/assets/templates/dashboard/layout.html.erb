@@ -23,16 +23,26 @@
 </div>
 
 <div class="row>">
-    <div class="col-sm-12">
-        <div class="video text-center"><h1>Video Section</h1></div>
+
+
+    <button ng-click="getSelectedStatistic();" class="col-sm-12">Click for Fact</button>
+    <div ng-show="selectedStatistic">   
+        <div class="video text-center"><h1>{{selectedStatistic.sentence}}</h1></div>
     </div>
 </div>
+
 
 <div class="row>">
     <div class="col-sm-12">
         <div class="about text-center"><h1>About Section</h1>
-           <button ng-click="revealFate();">Reveal Your Fate</button>
+            <button ng-click="revealTransport();">Click to see where you ended up</button>
+           <p>{{transport}}<p>
+           <button ng-click="revealFate();">Click to reveal if you were res</button>
            <p>{{fate}}</p>
+
         </div>
     </div>
 </div>
+
+
+<img class="alignnone size-large wp-image-654" title="Human Trafficking Infographic" src="http://www.rescuefreedom.org/resources/Human_Trafficking_Infographic_4.png" alt="Rescue:Freedom Human Trafficking Infographic" width="238" height="1024" />
