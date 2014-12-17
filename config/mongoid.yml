@@ -109,7 +109,7 @@ production:
 
        # Set this to ensure that your writes are a round-trip operation
        # and are confirmed by the system.
-       safe: true
+       # safe: true
 
        # refresh_interval specifies the number of seconds to cache server information.
        # Lowering this number will help the driver recover more quickly from changes to replica set reconfiguration
