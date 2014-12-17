@@ -1,5 +1,5 @@
 angular.module('myApp')
-.service('quoteService', function($http) {
+.service('quoteService', ["$http",  function($http) {
 
   var that = this;
   var quotesUrl = '/quotes';
@@ -13,4 +13,4 @@ angular.module('myApp')
   };
 
   
-});
+}]);

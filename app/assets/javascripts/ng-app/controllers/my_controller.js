@@ -1,17 +1,16 @@
 angular.module('myApp')
-    .controller('myCtrl', function ($scope, $state, $rootScope, personService, quoteService, statisticService) {
+    .controller('myCtrl', ['$scope', '$state', '$rootScope', 'personService', 'quoteService', 'statisticService', function ($scope, $state, $rootScope, personService, quoteService, statisticService) {
    
     $scope.personTypes = personService.personTypes;       
     
-    $scope.person = personService.person;
+    // $scope.person = personService.person;
 
     $scope.gotoNewPerson = function() {
      $state.go('dashboard.person_info');
     };
 
     $scope.changeScreen = function(personType) {
-      $scope.person = personService.createPerson(personType);
-      console.log($scope.person);
+      $rootScope.person = personService.createPerson(personType);
       $state.go('dashboard.person_detail');
     };
 
@@ -43,12 +42,17 @@ angular.module('myApp')
   };
 
     $scope.getStatistics();
+    
     $scope.getQuotes();
 
 
-    $scope.getSelectedQuote = function() {
-      var number = Math.floor(Math.random() * $scope.quotes.length);
-      $scope.selectedQuote = $scope.quotes[number];
+    $scope.getSelectedQuote = function(person) {
+      var filteredQuotes = _.filter($scope.quotes, function(quote) {
+        return quote.category === person.exploitationType
+      })
+      console.log(filteredQuotes)
+      var number = Math.floor(Math.random() * filteredQuotes.length);
+      $scope.selectedQuote = filteredQuotes[number];
     };
 
     $scope.getSelectedStatistic = function() {
@@ -72,5 +76,5 @@ angular.module('myApp')
 
 
     
-});
+}]);
 

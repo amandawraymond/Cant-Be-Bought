@@ -1,5 +1,5 @@
 angular.module('myApp')
-.service('statisticService', function($http) {
+.service('statisticService', ["$http",  function($http) {
 
   var that = this;
   var statisticsUrl = '/statistics';
@@ -13,4 +13,4 @@ angular.module('myApp')
   };
 
   
-});
+}]);

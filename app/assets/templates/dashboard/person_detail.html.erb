@@ -1,5 +1,13 @@
 <h1>Person Detail</h1>
 
- <p>You are a {{person.personType}} and based on weighted statistical probability you are being trafficked for {{person.exploitationType}}</p> 
- <h3>Scroll Down to see more statistics and the fate of your story</h3>
+<p>You are a {{person.personType}} and based on weighted statistical probability you are being trafficked for {{person.exploitationType}}</p>
+
+<button ng-click="getSelectedQuote(person);" class="col-sm-12">Click for Quote</button>
+<div ng-show="selectedQuote">   
+    <div class="video text-center"><h1>{{selectedQuote.sentence}}</h1></div>
+</div>
+
+
+
+<h3>Scroll Down to see more statistics and the fate of your story</h3>
 
