@@ -1,48 +1,150 @@
-<div  my-person class="container">
-    <div class="row">
-    <div class="col-sm-3 dashboard-navigation">
-        <h4>Dashboard Navigation</h4>
-        <ul class="nav nav-pills nav-stacked">
-            <li><a ui-sref="dashboard.people">People</a></li>
-            <li><a ui-sref="dashboard.person_info">Get Person Info</a></li>
-            <li><a ui-sref="dashboard.person_detail">Person Detail</a></li>
+<div id="wrapper" class="container">
+    <nav id="primary">
+        <ul>
+            <li>
+                <h1>Can't Be Bought</h1>
+                <a class="cant-be-bought" href="#cant-be-bought">View</a>
+            </li>
+            <li>
+                <h1>A Walk in Someone's Shoes</h1>
+                <a class="another-life" href="#another-life">View</a>
+            </li>
+            <li>
+                <h1>The Statistics</h1>
+                <a class="the-statistics" href="#the-statistics">View</a>
+            </li>
+            <li>
+                <h1>View Video</h1>
+                <a class="video" href="#video">View</a>
+            </li>
+            <li>
+                <h1>Join the Fight</h1>
+                <a class="join-the-fight" href="#join-the-fight">View</a>
+            </li>
         </ul>
-    </div>
-    <div class="col-sm-9">
-        <div class="dashboard-view-container">
-            <div class="dashboard-ui-view" ui-view></div>
+    </nav>
+    
+    <div id="content">
+        <div class="row" id="cant-be-bought">
+            <div class="col-lg-12 text-center">
+                <header>
+                    <h1>Can't Be Bought</h1>
+                </header>
+                <p>There are more slaves in the world today than ever before. Surprised? We were too. Continue scrolling to learn join-the-fight what's going on, and how you can help stop it.</p>
+                <nav class="next-prev">
+                    <hr />
+                    <a class="next another-life" href="#another-life">Next</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row" id="another-life">
+            <div class="col-sm-4">
+                <header>
+                    <h1>21 MILLION</h1>
+                </header>
+                <p>people are enslaved in the world today. <br>Human trafficking is the modern day slave trade.<br>In the USA alone, 208 people will be trafficked today.<br>Click on someone and experience their story.</p>
+                <nav class="next-prev">
+                    <a class="prev cant-be-bought" href="#cant-be-bought">Prev</a>
+                    <hr />
+                    <a class="next the-statistics" href="#the-statistics">Next</a>
+                </nav>
+            </div>
+            <div class="col-sm-8">
+                <div class="dashboard-view-container">
+                    <div class="dashboard-ui-view" ui-view></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" id="the-statistics">
+            <div class="col-sm-12 text-center">
+                <header>
+                    <h1>The Statistics</h1>
+                </header>
+
+                <div class="row graphs">
+                    <button class="btn btn-default" ng-click="selectGraph('graph1')">Graph 1</button>
+                    <button class="btn btn-default" ng-click="selectGraph('graph2')">Graph 2</button>
+                    <button class="btn btn-default" ng-click="selectGraph('graph3')">Graph 3</button>
+                    <button class="btn btn-default" ng-click="selectGraph('graph4')">Graph 4</button>
+                
+                    <div ng-switch on="selectedGraph">
+                      <div ng-switch-when="graph1">
+                        <div ng-controller="graph1" ng-include="'dashboard/graphs/graph1.html'"></div>
+                      </div>
+
+                      <div ng-switch-when="graph2">
+                          <div class="graph2 text-center" ng-controller="graph2">
+                              <h1>Graph 2 Section</h1>
+                              <div id="graph2" style="width:100%; height:400px;"></div>
+                          </div>
+                      </div>
+                      
+                      <div ng-switch-when="graph3">
+                        <div class="graph3 text-center" ng-controller="graph3">
+                          <div id="graph3" style="width:60%; height:600px; background-color: white; margin: 0 auto;"></div>
+                        </div>
+                      </div>
+                      
+                      <div ng-switch-when="graph4">
+                        <div class="graph4 text-center" ng-controller="graph4">
+                            <h1>Graph 4 Section</h1>
+                            <div id="graph4" style="min-width: 310px; min-height: 700px; max-height: 900px; max-width: 800px; margin: 0 auto;"></div>
+                        </div>
+                      </div>
+                    </div>  <!-- ng-switch -->
+                </div>
+
+                <nav class="next-prev">
+                    <a class="prev another-life" href="#another-life">Prev</a>
+                    <hr />
+                    <a class="next video" href="#video">Next</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row" id="video">
+            <div class="col-sm-12 text-center">
+            <header>
+                <h1>Video</h1>
+            </header>
+                <div class="row video">
+                    <div class="col-sm-12 text-center">
+                        <h1>Video Section</h1>
+                        <button class="btn btn-default" ng-click="getSelectedStatistic();" class="col-sm-12">Click for Fact</button>
+                        <div ng-show="selectedStatistic">   
+                            <div class="video text-center"><h1>{{selectedStatistic.sentence}}</h1></div>
+                        </div>
+                    </div>
+                </div>
+            <nav class="next-prev">
+                <a class="prev the-statistics" href="#the-statistics">Prev</a>
+                <hr />
+                <a class="next join-the-fight" href="#join-the-fight">Next</a>
+            </nav>
+            </div>
+        </div>        
+        
+        <div class="row" id="join-the-fight">
+            <header>
+                <h1>Join the Fight</h1>
+            </header>
+            <p>On this page you can click and find out what happened to the person you learned join-the-fight above.  You can also get in contact with organizations, ways to donate, and access to more reports.</p>
+            <div class="row about">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                       <button class="btn btn-default" ng-click="revealTransport();">Click to see where you ended up</button>
+                       <p>{{transport}}<p>
+                       <button class="btn btn-default" ng-click="revealFate();">Click to reveal if you were res</button>
+                       <p>{{fate}}</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="next-prev">
+                <a class="prev the-statistics" href="#the-statistics">Prev</a>
+                <hr />
+            </nav>
         </div>
     </div>
-    </div>
 </div>
-
-<div class="row>">
-    <div class="col-sm-12">
-        <div class="graphs text-center"><h1>Graph Section</h1></div>
-    </div>
-</div>
-
-<div class="row>">
-
-
-    <button ng-click="getSelectedStatistic();" class="col-sm-12">Click for Fact</button>
-    <div ng-show="selectedStatistic">   
-        <div class="video text-center"><h1>{{selectedStatistic.sentence}}</h1></div>
-    </div>
-</div>
-
-
-<div class="row>">
-    <div class="col-sm-12">
-        <div class="about text-center"><h1>About Section</h1>
-            <button ng-click="revealTransport();">Click to see where you ended up</button>
-           <p>{{transport}}<p>
-           <button ng-click="revealFate();">Click to reveal if you were res</button>
-           <p>{{fate}}</p>
-
-        </div>
-    </div>
-</div>
-
-
-<!-- <img class="alignnone size-large wp-image-654" title="Human Trafficking Infographic" src="http://www.rescuefreedom.org/resources/Human_Trafficking_Infographic_4.png" alt="Rescue:Freedom Human Trafficking Infographic" width="238" height="1024" /> -->
