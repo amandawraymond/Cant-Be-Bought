@@ -71,13 +71,16 @@
                 
                     <div ng-switch on="selectedGraph">
                       <div ng-switch-when="graph1">
-                        <div ng-controller="graph1" ng-include="'dashboard/graphs/graph1.html'"></div>
+                        <div class="graph1 text-center" ng-controller="graph1">
+                              <h1>Graph 1 Section</h1>
+                              <div id="graph1" style="width:60%; height:600px; margin: 0 auto;"></div>
+                          </div>
                       </div>
 
                       <div ng-switch-when="graph2">
                           <div class="graph2 text-center" ng-controller="graph2">
                               <h1>Graph 2 Section</h1>
-                              <div id="graph2" style="width:100%; height:400px;"></div>
+                              <div id="graph2" style="width:60%; height:400px; margin: 0 auto;"></div>
                           </div>
                       </div>
                       
