@@ -1,0 +1,117 @@
+{ 
+  "name": "World",
+  "children": [
+    {
+      "name": "North America, Central America, and the Caribbean",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 58%",
+          "parent": "North America, Central America, and the Caribbean"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 42%",
+          "parent": "North America, Central America, and the Caribbean"
+        }
+      ]
+    },
+    {
+      "name": "South America",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 94%",
+          "parent": "South America"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 6%",
+          "parent": "South America"
+        }
+      ]
+    },
+    {
+      "name": "Western and Central Europe",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 61%",
+          "parent": "Western and Central Europe"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 39%",
+          "parent": "Western and Central Europe"
+        }
+      ]
+    },
+    {
+      "name": "North Africa and the Middle East",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 32%",
+          "parent": "North Africa and the Middle East"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 68%",
+          "parent": "North Africa and the Middle East"
+        }
+      ]
+    },
+    {
+      "name": "Sub-Saharan Africa",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 97%",
+          "parent": "Sub-Saharan Africa"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 3%",
+          "parent": "Sub-Saharan Africa"
+        }
+      ]
+    },
+    {
+      "name": "Eastern Europe and Central Asia",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 99%",
+          "parent": "Eastern Europe and Central Asia"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 1%",
+          "parent": "Eastern Europe and Central Asia"
+        }
+      ]
+    },
+    {
+      "name": "South Asia",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 96%",
+          "parent": "South Asia"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 4%",
+          "parent": "South Asia"
+        }
+      ]
+    },
+    {
+      "name": "East Asia and the Pacific",
+      "parent": "World",
+      "children": [
+        {
+          "name": "Victims from WITHIN the region: 97%",
+          "parent": "East Asia and the Pacific"
+        },
+        {
+          "name": "Victims from OUTSIDE regions: 3%",
+          "parent": "East Asia and the Pacific"
+        }
+      ]
+    }
+  ]
+}
