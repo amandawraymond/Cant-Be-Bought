@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .controller('myCtrl', ['$scope', '$state', '$rootScope', 'personService', 'quoteService', 'statisticService', function ($scope, $state, $rootScope, personService, quoteService, statisticService) {
+    .controller('myCtrl', ['$scope', '$state', '$rootScope', 'personService', 'quoteService', 'statisticService', '$interval', function ($scope, $state, $rootScope, personService, quoteService, statisticService, $interval) {
    
     $scope.selectedGraph = 'graph1';
     
@@ -14,6 +14,7 @@ angular.module('myApp')
     $scope.changeScreen = function(personType) {
       $rootScope.person = personService.createPerson(personType);
       $state.go('dashboard.person_detail');
+      $scope.getSelectedQuote($scope.person);
     };
 
     $rootScope.fate = "Your fate is based on statistics from resources listed below:";
@@ -35,32 +36,33 @@ angular.module('myApp')
     });
   };
 
-    $scope.getStatistics = function() {
-    statisticService.getAllStatistics().success(function(data) {
-      $scope.statistics = data;
-    }).error(function() {
-      alert('Something went wrong!');
-    });
-  };
-
-    $scope.getStatistics();
-    
     $scope.getQuotes();
 
 
+    $scope.getRandomStatistic = function() {
+    statisticService.getAllStatistics().success(function(data) {
+      var number = Math.floor(Math.random() * data.length);
+      $scope.statistic = data[number].sentence;
+      });
+    };
+  
+    $interval(function(){
+        $scope.getRandomStatistic();
+     }.bind(this), 3000);    
+
+    $scope.getRandomStatistic();
+   
+      
     $scope.getSelectedQuote = function(person) {
-      var filteredQuotes = _.filter($scope.quotes, function(quote) {
-        return quote.category === person.exploitationType
-      })
-      console.log(filteredQuotes)
-      var number = Math.floor(Math.random() * filteredQuotes.length);
-      $scope.selectedQuote = filteredQuotes[number];
+      $scope.filteredQuotes = _.filter($scope.quotes, function(quote) {
+        return quote.category === person.exploitationType;
+      });
+      var number = Math.floor(Math.random() * $scope.filteredQuotes.length);
+      $scope.selectedQuote = $scope.filteredQuotes[number];
+      $rootScope.selectedQuote = $scope.filteredQuotes[number];
     };
 
-    $scope.getSelectedStatistic = function() {
-      var number = Math.floor(Math.random() * $scope.statistics.length);
-      $scope.selectedStatistic = $scope.statistics[number];
-    };
+
 
     // $scope.selectedGraph = 
 
