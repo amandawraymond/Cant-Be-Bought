@@ -115,9 +115,9 @@
                         <iframe width="420" height="315" src="//www.youtube.com/embed/vqiBkZq_fmA?vq=large&autohide=0&controls=0&loop=1&playlist=vqiBkZq_fmA&fs=1&rel=0&autoplay=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="quote well" >
+                <div class="well statistic" >
                     <div  ng-show="statistic">   
-                        <div><h1>{{statistic}}</h1></div>
+                        <p>{{statistic}}</p>
                     </div>
                 </div>
             <nav class="next-prev">
@@ -132,6 +132,8 @@
             <header>
                 <h1>Join the Fight</h1>
             </header>
+            <button class="btn btn-default" ng-click="writeCongress();">Write to Congress</button>
+      
             <p>On this page you can click and find out what happened to the person you learned join-the-fight above.  You can also get in contact with organizations, ways to donate, and access to more reports.</p>
             <div class="row about">
                 <div class="col-sm-12">
@@ -144,8 +146,6 @@
                                 <div><h1>{{counter}} humans have been trafficked since you have been on this site</h1></div>
                             </div>
                         </div>
-
-
                        <button class="btn btn-default" ng-click="revealTransport();">Click to see where you ended up</button>
                        <p>{{transport}}<p>
                        <button class="btn btn-default" ng-click="revealFate();">Click to reveal if you were res</button>

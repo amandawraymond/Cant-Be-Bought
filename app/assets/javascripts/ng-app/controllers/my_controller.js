@@ -74,6 +74,9 @@ angular.module('myApp')
       $rootScope.selectedQuote = $scope.filteredQuotes[number];
     };
 
+    $scope.writeCongress = function() {
+      window.open('http://www.unicefusa.org/help/advocate/take-action-end-child-trafficking', '_blank');
+    };
 
 
     // $scope.selectedGraph = 
