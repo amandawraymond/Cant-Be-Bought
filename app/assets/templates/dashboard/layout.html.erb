@@ -109,19 +109,15 @@
 
         <div class="row" id="video">
             <div class="col-sm-12 text-center">
-            <header>
-                <h1>Video</h1>
-            </header>
                 <div class="row video">
                     <div class="col-sm-12 text-center">
-                        <h1>Video Section</h1>
-                        <iframe src="//player.vimeo.com/video/114795036" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/114795036">try dec 17</a> from <a href="http://vimeo.com/user33950663">amanda raymond</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-                        <button class="btn btn-default" ng-click="getSelectedStatistic();" class="col-sm-12">Click for Fact</button>
+                        <iframe width="420" height="315" src="//www.youtube.com/embed/ea07Wwnk0fg?vq=large&autohide=1&controls=1&loop=1&playlist=ea07Wwnk0fg&fs=1&rel=0&autoplay=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                      <button class="btn btn-default" ng-click="getSelectedStatistic();" class="col-sm-12">Statistic</button>
                         <div ng-show="selectedStatistic">   
                             <div class="video text-center"><h1>{{selectedStatistic.sentence}}</h1></div>
                         </div>
-                    </div>
-                </div>
             <nav class="next-prev">
                 <a class="prev the-statistics" href="#the-statistics">Prev</a>
                 <hr />
