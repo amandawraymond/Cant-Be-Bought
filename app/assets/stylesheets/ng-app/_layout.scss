@@ -9,6 +9,7 @@ body {
   line-height: 1.5;
   color: #000;
   font-size: 16px;
+  font-family: 'Oxygen', sans-serif;
 }
 .container {
     position: relative;
@@ -67,15 +68,17 @@ nav#primary {
   }
   a {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   text-indent: -9999px;
-  background: transparent image-url('nav-dot.png') 4px 4px no-repeat;
+  background: #FEC77C;
+  border-radius: 50%;
   }
 }
 
 nav#primary a:hover, nav#primary a.active {
-  background: transparent image-url('nav-dot.png') 4px -16px no-repeat;
+  background: white;
+  border-radius: 50%;
 }
 nav#primary h1 {
   position: absolute;
@@ -86,7 +89,7 @@ nav#primary h1 {
   padding: 4px 20px 4px 7px;;
   color: #fff;
   white-space: nowrap;
-  background: transparent image-url('nav-arrow.png') 100% 50% no-repeat;
+  border: 3px solid #FEC77C;
   }
 nav.next-prev {
   margin: 20px 0 0 0;
@@ -98,18 +101,19 @@ nav.next-prev {
     text-indent: -9999px;
     }
   a.prev {
+    
     margin: 0 auto 5px auto;
-    background: transparent image-url('scroll-arrow-up.svg') 0 0 no-repeat;
+    background: transparent image-url('scroll-arrow-up.svg') no-repeat;
     }
     a.prev:hover {
-      background: transparent image-url('scroll-arrow-up.svg') 0 -11px no-repeat;
+      background: transparent image-url('scroll-arrow-up.svg') no-repeat;
       }
   a.next {
     margin: 5px auto 0 auto;
-    background: transparent image-url('scroll-arrow-down.svg') -1px 0 no-repeat;
+    background: transparent image-url('scroll-arrow-down.svg') no-repeat;
     }
     a.next:hover {
-      background: transparent image-url('scroll-arrow-down.svg') -1px -11px no-repeat;
+      background: transparent image-url('scroll-arrow-down.svg') no-repeat;
       }
 
 /* Parallax
@@ -138,8 +142,15 @@ nav.next-prev {
   }
 #cant-be-bought {
   position: relative;
-  top: 0px;
+  top: 50px;
+  h1 {
+    font-size: 100px;
+    padding-bottom: 30px;
   }
+  p {
+    top: 20px;
+  }
+}
 #another-life {
   position: relative;
   top: 1090px;
