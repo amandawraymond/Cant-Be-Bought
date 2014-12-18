@@ -3,9 +3,9 @@ angular.module('myApp')
 
     console.log('graph3');
 
-    var margin = {top: 20, right: 120, bottom: 20, left: 120},
+    var margin = {top: 60, right: 0, bottom: 20, left: 300},
         width = 960 - margin.right - margin.left,
-        height = 800 - margin.top - margin.bottom;
+        height = 500 - margin.top - margin.bottom;
         
     var i = 0,
         duration = 750,

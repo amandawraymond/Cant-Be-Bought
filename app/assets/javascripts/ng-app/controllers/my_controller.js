@@ -1,7 +1,7 @@
 angular.module('myApp')
     .controller('myCtrl', ['$scope', '$state', '$rootScope', 'personService', 'quoteService', 'statisticService', function ($scope, $state, $rootScope, personService, quoteService, statisticService) {
    
-    $scope.selectedGraph = 'graph2';
+    $scope.selectedGraph = 'graph1';
     
     $scope.personTypes = personService.personTypes;       
     
