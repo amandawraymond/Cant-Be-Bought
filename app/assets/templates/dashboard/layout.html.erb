@@ -123,7 +123,7 @@
                 </div>
             </div>
             <div class="col-sm-12 video-stat text-center ">
-                <div  ng-show="statistic">   
+                <div ng-show="statistic">   
                     <div><h4>{{statistic}}</h4></div>
                 </div>
             </div>
@@ -137,28 +137,23 @@
         </div>        
         
         <div class="row" id="join-the-fight">
-            <div class="join-the-fight">
-                <header>
-                    <h1>Join the Fight</h1>
-                </header>
-                <p>On this page you can click and find out what happened to the person you learned join-the-fight above.  You can also get in contact with organizations, ways to donate, and access to more reports.</p>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="text-center">
-                            <div class="counter">
-                                <div ng-show="counter < 2">   
-                                    <div><h1>{{counter}} human has been trafficked since you have been on this site</h1></div>
-                                </div>
-                                 <div  ng-show="counter > 1">   
-                                    <div><h1>{{counter}} humans have been trafficked since you have been on this site</h1></div>
-                                </div>
-                            </div>
-                           <button class="btn btn-default" ng-click="revealTransport();">Click to see where you ended up</button>
-                           <p>{{transport}}<p>
-                           <button class="btn btn-default" ng-click="revealFate();">Click to reveal if you were res</button>
-                           <p>{{fate}}</p>
-                        </div>
+            <div class="col-sm-12 join-the-fight">
+                <div class="col-sm-5 text-center counter">
+                <p class="lead">A PERSON IS</p><h1>TRAFFICKED</h1><p class="lead">EVERY 30 SECONDS</p> 
+                    <div ng-show="counter < 2">   
+                        <p>{{counter}} human has been trafficked since you have been on this site</p>
                     </div>
+                     <div ng-show="counter > 1">   
+                        <p>{{counter}} humans have been trafficked since you have been on this site</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <h1>Join the Fight</h1>
+                    <p>On this page you can click and find out what happened to the person you learned join-the-fight above.  You can also get in contact with organizations, ways to donate, and access to more reports.</p>
+                    <button class="btn btn-default" ng-click="revealTransport();">Click to see where you ended up</button>
+                    <p>{{transport}}<p>
+                    <button class="btn btn-default" ng-click="revealFate();">Click to reveal if you were res</button>
+                    <p>{{fate}}</p>
                 </div>
             </div>
             <div class="col-sm-12 center-block">
