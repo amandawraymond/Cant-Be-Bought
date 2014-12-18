@@ -1,5 +1,5 @@
 angular.module('myApp')
-.service('statisticService', ["$http",  function($http) {
+.service('statisticService', ['$http', '$timeout',  function($http, $timeout) {
 
   var that = this;
   var statisticsUrl = '/statistics';
