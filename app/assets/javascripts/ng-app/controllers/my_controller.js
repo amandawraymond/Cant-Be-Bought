@@ -48,9 +48,21 @@ angular.module('myApp')
   
     $interval(function(){
         $scope.getRandomStatistic();
-     }.bind(this), 3000);    
+     }.bind(this), 1000);    
 
     $scope.getRandomStatistic();
+
+    
+    $scope.timedCounter = function(count) {
+      $scope.counter = count + 1;
+    };
+
+    $interval(function(){
+        $scope.timedCounter($scope.counter);
+     }.bind(this), 1000);    
+
+    $scope.timedCounter(0);
+    
    
       
     $scope.getSelectedQuote = function(person) {

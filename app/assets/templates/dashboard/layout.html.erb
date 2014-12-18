@@ -136,6 +136,16 @@
             <div class="row about">
                 <div class="col-sm-12">
                     <div class="text-center">
+                        <div>
+                            <div ng-show="counter < 2">   
+                                <div><h1>{{counter}} human has been trafficked since you have been on this site</h1></div>
+                            </div>
+                             <div  ng-show="counter > 1">   
+                                <div><h1>{{counter}} humans have been trafficked since you have been on this site</h1></div>
+                            </div>
+                        </div>
+
+
                        <button class="btn btn-default" ng-click="revealTransport();">Click to see where you ended up</button>
                        <p>{{transport}}<p>
                        <button class="btn btn-default" ng-click="revealFate();">Click to reveal if you were res</button>
