@@ -181,5 +181,6 @@ function redrawDotNav(){
   
 }
 
+
 }]);
 

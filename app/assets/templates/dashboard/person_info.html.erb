@@ -1,12 +1,12 @@
 <div class="text-center">
-  <h2>Get Person Info</h2>
-
   <h3>Are you Male or Female?</h3>
-  <p>fact: In 2010-2012 49 per cent of detected victims are adult women, 18% are adult males, and 33 percent of detected victims are children. It is estimated that 21% of human traffic victims are female children and 12% are male children.</p> 
+  
+  <div class="row man-woman">
+      <div class="woman col-sm-4"><img src="http://i.imgur.com/ezN3FXU.png?1" ng-click="changeScreen('female');"></div>
+      <div class="man col-sm-4"><img src="https://i.imgur.com/0JLk7v0.png" ng-click="changeScreen('male');"></div>
+  </div>
 
-  <ul class="list-inline">
-    <li ng-repeat="personType in personTypes">
-      <button class="btn btn-default" ng-click="changeScreen(personType);">{{personType}}</button>
-    </li>
-  </ul>
+  <p class="lead"><strong>Fact:</strong> <em>In 2010-2012 49% of detected victims were adult women,<br>18% are adult males, and 33 percent of detected victims were children.<br>It's estimated that 21% of all human traffic victims are<br>female children and 12% are male children.</em></p> 
+
+
 </div>
