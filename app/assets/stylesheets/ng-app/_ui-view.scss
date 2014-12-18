@@ -17,17 +17,15 @@
   color: lightblue;
   font-size: 25px;
 }
-
-.woman {
-  cursor: pointer;
+.man-woman {
+  padding-left: 30%;
 }
-
 .man {
   cursor: pointer;
 }
-
-.man-woman {
-  margin-left: 250px;
-  margin-bottom: 100px;
-  margin-top: 50px;
+.woman {
+  cursor: pointer;
+}
+.dashboard-view-container {
+  height: 600px;
 }

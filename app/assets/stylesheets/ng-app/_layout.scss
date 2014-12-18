@@ -1,3 +1,17 @@
+.join-the-fight {
+  margin-bottom: 6em;
+}
+.graph-buttons {
+  margin-bottom: 15px;
+}
+.people-nav {
+  margin-top: 1200px;
+}
+.video-stat {
+  max-width: 70%;
+  margin-left: 15%;
+  margin-bottom: 1em;
+}
 /* Parallax CSS */
 
 html { 
@@ -92,28 +106,28 @@ nav#primary h1 {
   border: 3px solid #FEC77C;
   }
 nav.next-prev {
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
+  padding-left: 45%;
   }
   a.prev,
   a.next {
+    margin: 0 auto;
     display: block;
-    width: 25px;
+    width: 65px;
+    height: 65px;
     text-indent: -9999px;
     }
   a.prev {
-    
-    margin: 0 auto 5px auto;
-    background: transparent image-url('scroll-arrow-up.svg') no-repeat;
+    background: transparent image-url('https://i.imgur.com/iMSZ7Ko.png?1') no-repeat;
     }
     a.prev:hover {
-      background: transparent image-url('scroll-arrow-up.svg') no-repeat;
+      background: transparent image-url('https://i.imgur.com/iMSZ7Ko.png?1') no-repeat;
       }
   a.next {
-    margin: 5px auto 0 auto;
-    background: transparent image-url('scroll-arrow-down.svg') no-repeat;
+    background: transparent image-url('https://i.imgur.com/jPmltjp.png?1') no-repeat
     }
     a.next:hover {
-      background: transparent image-url('scroll-arrow-down.svg') no-repeat;
+      background: transparent image-url('https://i.imgur.com/jPmltjp.png?1') no-repeat;
       }
 
 /* Parallax
@@ -138,7 +152,7 @@ nav.next-prev {
 #the-statistics,
 #video,
 #join-the-fight {
-  padding-top: 105px;
+  padding-top: 50px;
   }
 #cant-be-bought {
   position: relative;
@@ -154,6 +168,7 @@ nav.next-prev {
 #another-life {
   position: relative;
   top: 1090px;
+  margin-bottom: 2em;
   }
 #the-statistics {
   position: relative;
@@ -166,6 +181,7 @@ nav.next-prev {
 #join-the-fight {
   position: relative;
   top: 4360px;
+  padding-bottom: 150px;
   }
 /* foreground (ballons/landscape) */
 // #parallax-bg3 {
