@@ -48,7 +48,7 @@ angular.module('myApp')
   
     $interval(function(){
         $scope.getRandomStatistic();
-     }.bind(this), 1000);    
+     }.bind(this), 4000);    
 
     $scope.getRandomStatistic();
 
@@ -59,7 +59,7 @@ angular.module('myApp')
 
     $interval(function(){
         $scope.timedCounter($scope.counter);
-     }.bind(this), 1000);    
+     }.bind(this), 30000);    
 
     $scope.timedCounter(0);
     
