@@ -74,6 +74,10 @@ angular.module('myApp')
       $rootScope.selectedQuote = $scope.filteredQuotes[number];
     };
 
+    $scope.goToQuote = function() {
+      $state.go('dashboard.quote')
+    }
+
 
 
     // $scope.selectedGraph = 
