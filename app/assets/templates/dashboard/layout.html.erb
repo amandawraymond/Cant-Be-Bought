@@ -152,14 +152,17 @@
                 </div>
                 <div class="col-sm-7">
                     <h1>Join the Fight</h1>
-                    <p ng-hide="fate"class="lead">Earlier, you got information about a trafficking victim.  Click below, to find out their fate.</p> 
+                    <p ng-hide="fate"class="lead">Earlier, you got information about a trafficking victim.</br>Click below to find out their fate.</p> 
 
                     <div class="reveal"> 
                         <button class="fate btn btn-default" ng-hide="fate" ng-click="revealFate();">Click to reveal if you were rescued</button>
-                        <p ng-show="fate">{{transport}}</br>{{fate}}</p> 
+                        <p class="lead" ng-show="fate">{{fate}}</br>{{transport}}</p> 
                         <img class="rescue" ng-show="fate" src="https://i.imgur.com/hJAwu4C.png?1"/>
+                        <img class="rescue" ng-hide="fate" src="http://i.imgur.com/lVQwSpB.png?2"/>
+                        
                     </div>
-                    <p class="lead">Now that you know what's going on, you can't ever say you didn't know what was going on.  Get involved.</p>
+                    <p class="lead">You may choose to look the other way but you can never again say</br>that you did not know.</p>
+                    <h2 style="color: lightblue;">Get involved.</h2></br>    
                     <div>
                         <div class="col-sm-12">
                             <button class="donate btn btn-default btn-lg" ng-click="openTab('//www.unicefusa.org/help/advocate/take-action-end-child-trafficking')">Write to Congress</button>

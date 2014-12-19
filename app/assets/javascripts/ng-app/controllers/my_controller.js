@@ -14,7 +14,7 @@ angular.module('myApp')
     $scope.changeScreen = function(personType) {
       $rootScope.person = personService.createPerson(personType);
       $state.go('dashboard.person_detail');
-      $scope.getSelectedQuote($scope.person);
+      $scope.getSelectedQuote($scope.person);   
     };
 
     // $rootScope.fate = "Your fate is based on statistics from resources listed below:";
