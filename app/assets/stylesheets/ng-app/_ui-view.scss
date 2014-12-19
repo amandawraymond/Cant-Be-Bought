@@ -6,19 +6,26 @@
   margin: 0 auto;
 }
 
+.people-statistic {
+  max-width: 600px;
+  margin: 0 auto;
+}
 .quote {
-  font-family: 'Swanky and Moo Moo', cursive;
+  font-family: 'Architects Daughter';
 }
 
 .well {
   background: transparent;
-  width:60%;
+  width:80%;
   margin: 0 auto;
-  color: lightblue;
   font-size: 25px;
+  border: none;
+
 }
 .man-woman {
-  padding-left: 30%;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  padding-left: 28%;
 }
 .man {
   cursor: pointer;
@@ -28,4 +35,14 @@
 }
 .dashboard-view-container {
   height: 600px;
+}
+
+.person-detail {
+  h3 {
+    color: #FEC77C;
+  }
+  p {
+    width: 600px;
+    margin: 0 auto;
+  }
 }

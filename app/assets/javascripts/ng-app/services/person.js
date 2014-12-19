@@ -13,7 +13,7 @@ angular.module('myApp')
         if (number < 2) {
         return "organ removal";    
       } else if (number < 10) {
-        return "other form";   
+        return "an alternative form of exploitation";   
       }  else if (number < 18) {
         return "sexual exploitation";   
       } else {
@@ -28,7 +28,7 @@ angular.module('myApp')
       if (number < 2) {
       return "organ removal";    
     } else if (number < 142) {
-      return "other form"; 
+      return "an alternative form of exploitation"; 
     }  else if (number < 212) {
       return "forced labor";   
     } else {
