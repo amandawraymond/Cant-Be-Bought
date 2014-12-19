@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .controller('myCtrl', ['$scope', '$state', '$rootScope', 'personService', 'quoteService', 'statisticService', '$interval', function ($scope, $state, $rootScope, personService, quoteService, statisticService, $interval) {
+    .controller('myCtrl', ['$scope', '$state', '$rootScope', 'personService', 'quoteService', 'statisticService', '$interval', '$window', function ($scope, $state, $rootScope, personService, quoteService, statisticService, $interval, $window) {
    
     $scope.selectedGraph = 'graph1';
     
@@ -14,19 +14,17 @@ angular.module('myApp')
     $scope.changeScreen = function(personType) {
       $rootScope.person = personService.createPerson(personType);
       $state.go('dashboard.person_detail');
-      $scope.getSelectedQuote($scope.person);
+      $scope.getSelectedQuote($scope.person);   
     };
 
-    $rootScope.fate = "Your fate is based on statistics from resources listed below:";
+    // $rootScope.fate = "Your fate is based on statistics from resources listed below:";
     $scope.revealFate = function() {
       $rootScope.fate = personService.createFate();
-
-    };
-    $rootScope.transport = "UNODC and State Trafficking 2014 Report ";
-    $scope.revealTransport = function() {
       $rootScope.transport = personService.createTransport();
       
-    };
+      };
+    // $rootScope.transport = "UNODC and State Trafficking 2014 Report ";
+
 
     $scope.getQuotes = function() {
     quoteService.getAllQuotes().success(function(data) {
@@ -96,10 +94,15 @@ angular.module('myApp')
     //   $scope.selectedLaborQuote = $scope.laborQuotes[number];
     // };
 
-//buttons to switch graphs
-$scope.selectGraph = function(requestedGraph) {
-  $scope.selectedGraph = requestedGraph;
-};
+  //buttons to switch graphs
+  $scope.selectGraph = function(requestedGraph) {
+    $scope.selectedGraph = requestedGraph;
+  };
+
+  $scope.openTab= function(url) {
+       $window.open(url, '_blank');
+    };
+
 
 
 //parallax-library//

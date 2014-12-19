@@ -58,9 +58,9 @@ angular.module('myApp')
       var number = Math.floor((Math.random() * 101) + 1);
       console.log(number);
       if (number < 2) {
-        return "You were one of the lucky ones that was saved";
+        return "The person you chose was one of the lucky ones. They are free now.";
        } else {
-        return "You were not rescued";
+        return "Sadly, the person you chose was never freed from slavery.";
       }
     };
 
@@ -68,9 +68,9 @@ angular.module('myApp')
       var number = Math.floor((Math.random() * 10) + 1);
       console.log(number);
        if (number < 4) {
-        return "You are of the percentage of victims that is exploitation in the country of your citizenship";    
+        return "Based on the statistics that we know it's likely that the person that you chose was exploited within their country of citizenship.";    
       } else {
-        return "You of the percentage of victims that is trafficked across at least one border";    
+        return "Based on the statistics that we know it's likely that the person that you chose was trafficked across at least one border.";    
       } 
     };
 

@@ -15,7 +15,7 @@
   margin-top: 500px;
 }
 .video-stat {
-  max-width: 70%;
+  max-width: 75%;
   margin-left: 15%;
   margin-bottom: 1em;
 }
@@ -119,7 +119,7 @@ nav.next-prev {
   }
   a.prev,
   a.next {
-    margin: 0 auto;
+    margin: auto;
     display: block;
     width: 65px;
     height: 40px;
@@ -127,6 +127,9 @@ nav.next-prev {
     }
   a.prev {
     background: transparent image-url('//i.imgur.com/Izw8R0x.png?2') no-repeat;
+    .nav-video {
+        
+      }
     }
     a.prev:hover {
       background: transparent image-url('//i.imgur.com/Izw8R0x.png?2') no-repeat;
@@ -137,13 +140,30 @@ nav.next-prev {
     a.next:hover {
       background: transparent image-url('//i.imgur.com/BFTLCXS.png?1') no-repeat;
       }
+.donate {
+    color: #FEC77C;
+    background-color: transparent;
+    width: 20em;
+  }
+.reveal {
+  display: inline;
+}
+.rescue {
+  margin: 0 auto;
+}
+.fate {
+    color: #FEC77C;
+    background-color: transparent;
+    width: 20em;
+    margin-top: 3em;
+    margin-bottom: 4em;
+  }
 
 /* Parallax
 *****************************************************************/
 
 /* content */
 #content {
-  z-index: 4;
   position: relative;
   max-width: 1500px; 
   line-height: 1.7;
