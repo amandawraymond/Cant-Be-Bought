@@ -33,6 +33,11 @@ var app = angular
                 url: '/person_detail',
                 templateUrl: 'dashboard/person_detail.html',
                 controller: 'myCtrl'
+            })
+            .state('dashboard.quote', {
+                url: '/quote',
+                templateUrl: 'dashboard/quote.html',
+                controller: 'myCtrl'
             });
 
 

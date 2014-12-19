@@ -1,16 +1,12 @@
 <div class="text-center person-detail">
-  <h3>Based on statistical probability, the person you chose was trafficked for {{person.exploitationType}}.</h3>
-
-  <p>There are many ways that people are used when they're trafficked.  Forced labor, sexual exploitation and organ removal are most common, however there are many various other ways people are used.  Statistically, individuals are more likely to trafficked for certain purposes, based on factors like age and gender.</p>
-  
-  <p>Some people know they're being trafficked, while others are are tricked by someone who they previously trusted.</p>
+  <h3>Based on statistical probability,<br>the person you chose was trafficked for<br><h2>{{person.exploitationType}}</h2>
   <br>
-  <p>Below is a story from an identified victim who was also exploited for {{person.exploitationType}}.
-  
-  <div class="quote" >   
-      <div class="well"><p ng-show="selectedQuote" class="lead">{{selectedQuote.sentence}}</p></div>
+  <div class="well">
+    <p>There are many ways that people are used when they're trafficked.  Forced labor, sexual exploitation and organ removal are most common, however there are many various other ways people are used.  Statistically, individuals are more likely to trafficked for certain purposes, based on factors like age and gender.</p>
+    
+    <p>Some people know they're being trafficked, while others are are tricked by someone who they previously trusted.</p>
   </div>
-
-  <h3>Scroll Down to see more statistics and the fate of your story</h3>
+  <p class="lead">Click on the silhouettes below to continue.</p>
+  <img ng-click="goToQuote()" id="silouette" src="https://i.imgur.com/sU8Ts0m.png?1">
+  <a class="people-link" ui-sref="dashboard.people">or click here to choose a different person</a>
 </div>
-

@@ -20,7 +20,6 @@
   margin: 0 auto;
   font-size: 25px;
   border: none;
-
 }
 .man-woman {
   padding-top: 4em;
@@ -44,5 +43,26 @@
   p {
     width: 600px;
     margin: 0 auto;
+    color: #FEC77C;
   }
+  a {
+    color: gray;
+    .people-link {
+      margin-top: 2em;
+    }
+  }
+  .well {
+    font-size: 20px;
+    border: 2px solid white;
+    margin-bottom: 2em;
+    p {color: white;} 
+  }
+}
+#silouette {
+  margin: 0 auto;
+  padding-top: 5em;
+  cursor: pointer;
+}
+.quotation2 {
+  margin-left: 95%;
 }
