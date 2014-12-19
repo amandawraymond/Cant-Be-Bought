@@ -58,9 +58,9 @@ angular.module('myApp')
       var number = Math.floor((Math.random() * 101) + 1);
       console.log(number);
       if (number < 2) {
-        return "You were one of the lucky ones that was saved";
+        return "You were one of the lucky ones that was saved.";
        } else {
-        return "You were not rescued";
+        return "You were not rescued.";
       }
     };
 
@@ -70,7 +70,7 @@ angular.module('myApp')
        if (number < 4) {
         return "You are of the percentage of victims that is exploitation in the country of your citizenship";    
       } else {
-        return "You of the percentage of victims that is trafficked across at least one border";    
+        return "You are of the percentage of victims that is trafficked across at least one border.";    
       } 
     };
 
