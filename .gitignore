@@ -16,5 +16,6 @@
 /tmp
 .DS_Store
 lib/assests/bower_components
+public/assets
 
 
