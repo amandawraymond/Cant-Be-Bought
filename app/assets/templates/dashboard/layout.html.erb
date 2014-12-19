@@ -27,10 +27,10 @@
     <div id="content">
         <div class="row" id="cant-be-bought">
             <div class="col-sm-12 text-center">
+                <img class="center-block hands_chains" src="https://i.imgur.com/FTk3KqW.png?1">
                 <header>
-                    <h1 id="svg-text">Can't Be Bought</h1>
+                    <h1>can't be bought</h1>
                 </header>
-                <p class="lead">There are more slaves in the world today than ever before.<br><br>Surprised?  We were too.<br><br>Continue scrolling to learn what's going on<br>and how you can help stop it.</p>
                 <div class="row">
                     <div class="col-sm-12 center-block">
                         <nav>
@@ -44,9 +44,9 @@
         <div class="row" id="another-life">
             <div class="col-sm-4">
                 <header>
-                    <h1>21 MILLION</h1>
+                    <h1><strong>21 MILLION</strong></h1>
                 </header>
-                <p>people are enslaved in the world today.<h2>HUMAN TRAFFICKING</h2>is the modern day slave trade.<br>In the USA alone, 208 people will be trafficked today.<br>Click on someone and experience their story.</p>
+                <p class="lead">people are enslaved in the world today.</p><h2><strong>HUMAN TRAFFICKING</strong></h2><p class="lead">is the modern day slave trade.</p>
             </div>
             <div class="col-sm-8">
                 <div class="dashboard-view-container">
@@ -138,13 +138,15 @@
         
         <div class="row" id="join-the-fight">
             <div class="col-sm-12 join-the-fight">
-                <div class="col-sm-5 text-center counter">
-                <p class="lead">A PERSON IS</p><h1>TRAFFICKED</h1><p class="lead">EVERY 30 SECONDS</p> 
-                    <div ng-show="counter < 2">   
-                        <p>{{counter}} human has been trafficked since you have been on this site</p>
+                <div class="col-sm-5 counter">
+                    <h2>A PERSON IS</h2><h1>TRAFFICKED</h1><h2>EVERY 30 SECONDS</h2> 
+                    <div ng-show="counter < 2">
+                        <div class="col-sm-4"><h1>{{counter}}</h1></div>   
+                        <div class="col-sm-8"><h3>person has been trafficked in the time you've been on this site.</h3></div>
                     </div>
-                     <div ng-show="counter > 1">   
-                        <p>{{counter}} humans have been trafficked since you have been on this site</p>
+                    <div ng-show="counter > 1">   
+                        <div class="col-sm-4"><h1>{{counter}}</h1></div>
+                        <div class="col-sm-8"><h3>people has been trafficked in the time you've been on this site.</h3></div>
                     </div>
                 </div>
                 <div class="col-sm-7">
@@ -155,11 +157,11 @@
                     <button class="btn btn-default" ng-click="revealFate();">Click to reveal if you were res</button>
                     <p>{{fate}}</p>
                 </div>
-            </div>
-            <div class="col-sm-12 center-block">
-                <nav>
-                    <a class="prev the-statistics" href="#the-statistics">Prev</a>
-                </nav>
+                <div class="col-sm-12 center-block">
+                    <nav>
+                        <a class="prev video" href="#video">Prev</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
