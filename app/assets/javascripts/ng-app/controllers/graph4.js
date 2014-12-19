@@ -158,7 +158,7 @@ angular.module('myApp')
                 }
            },
            title: {
-               text: 'Cost of a Person over Time'
+               text: '<strong>Cost of a Person over Time</strong>'
            },
            subtitle: {
                text: ' Hover over any marker for more information<br>Source: www.informationisbeautiful.com/data'

@@ -12,7 +12,7 @@ angular.module('myApp')
                 }
             },
             title: {
-                text: 'Trafficking Breakdown by Type and Gender',
+                text: '<strong>Trafficking Breakdown by Type and Gender</strong>',
                 style: {
                         color: 'black',
                         font: '20px "Raleway", sans-serif'

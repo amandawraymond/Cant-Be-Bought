@@ -94,7 +94,7 @@
                       <div ng-switch-when="graph3">
                         <div class="graph3 text-center" ng-controller="graph3">
                           <div id="graph3" style="width:70%; height:600px; background-color: white; margin: 0 auto;">
-                            <h3 style="color: black; padding-top: 1em;"><strong>Where Trafficked Victims are From - By Region</strong></h3><p style="color: black; margin-bottom: 0;">Click on a Node to Reveal Information</p>
+                            <h3 style="color: black; padding-top: 1em;"><strong>Where Trafficked Victims are From - By Region</strong></h3><p style="color: black; margin-bottom: 0;">Click on a bubble to reveal information</p>
                           </div>
                         </div>
                       </div>
@@ -120,7 +120,7 @@
             <div class="col-sm-12 text-center">
                 <div class="row video">
                     <div class="col-sm-12 text-center">
-                        <iframe src="//www.youtube.com/embed/vqiBkZq_fmA?vq=large&autohide=0&controls=0&rel=0&autoplay=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="//www.youtube.com/embed/ea07Wwnk0fg?vq=large&autohide=0&controls=0&rel=0&autoplay=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                     <p ng-hide="fate"class="lead">Earlier, you got information about a trafficking victim.</br>Click below to find out their fate.</p> 
 
                     <div class="reveal"> 
-                        <button class="fate btn btn-default" ng-hide="fate" ng-click="revealFate();">Click to reveal if you were rescued</button>
+                        <button class="fate btn btn-default" ng-hide="fate" ng-click="revealFate();">Click to reveal their fate</button>
                         <p class="lead" ng-show="fate">{{fate}}</br>{{transport}}</p> 
                         <img class="rescue" ng-show="fate" src="https://i.imgur.com/hJAwu4C.png?1"/>
                         <img class="rescue" ng-hide="fate" src="http://i.imgur.com/lVQwSpB.png?2"/>

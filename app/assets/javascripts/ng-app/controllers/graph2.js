@@ -10,7 +10,7 @@ angular.module('myApp')
             }
         },
         title: {
-            text: 'Share of Trafficked Victims Over Time',
+            text: '<strong>Share of Trafficked Victims Over Time</strong>',
             subtitle: 'UNDOC Report in Trafficking in Humans 2014',
             style: {
                     color: 'black',

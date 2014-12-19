@@ -68,9 +68,9 @@ angular.module('myApp')
       var number = Math.floor((Math.random() * 10) + 1);
       console.log(number);
        if (number < 4) {
-        return "Based on the statistics that we know it's likely that the person that you chose was exploited within their country of citizenship.";    
+        return "Based on the statistics that we know it's likely that the person was exploited within their country of citizenship.";    
       } else {
-        return "Based on the statistics that we know it's likely that the person that you chose was trafficked across at least one border.";    
+        return "Based on the statistics that we know it's likely that the person was trafficked across at least one border.";    
       } 
     };
 
