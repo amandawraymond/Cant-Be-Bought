@@ -4,11 +4,18 @@ angular.module('myApp')
     $(function () { 
       $('#graph2').highcharts({
         chart: {
-            type: 'area'
+            type: 'area',
+            style: {
+                font: 'bold 14px "Raleway", sans-serif',
+            }
         },
         title: {
             text: 'Share of Trafficked Victims Over Time',
-            subtitle: 'UNDOC Report in Trafficking in Humans 2014'
+            subtitle: 'UNDOC Report in Trafficking in Humans 2014',
+            style: {
+                    color: 'black',
+                    font: '20px "Raleway", sans-serif'
+                }
         },
         xAxis: {
             categories: ['2004', '2006', '2009', '2011']
@@ -33,7 +40,7 @@ angular.module('myApp')
         }, {
             name: 'Percent of Children',
             data: [13, 22, 27, 33],
-            color: '#B20000'
+            color: '#FEC77C'
         }]
       });
     });
