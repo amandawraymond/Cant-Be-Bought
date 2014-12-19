@@ -153,12 +153,15 @@ angular.module('myApp')
        $('#graph4').highcharts({
            chart: {
                type: 'scatter',
+               style: {
+                    font: 'bold 14px "Raleway", sans-serif',
+                }
            },
            title: {
                text: 'Cost of a Person over Time'
            },
            subtitle: {
-               text: '(in US dollars; adjusted for inflation)<br>Source: www.informationisbeautiful.com/data'
+               text: ' Hover over any marker for more information<br>Source: www.informationisbeautiful.com/data'
            },
            xAxis: {
                title: {
@@ -169,19 +172,24 @@ angular.module('myApp')
            },
            yAxis: {
                title: {
-                   text: 'Cost in US Dollars'
+                   text: 'Cost in US Dollars (in US dollars; adjusted for inflation)'
                },
            
                endOnTick: true,
                showLastLabel: true
            },
+           legend: {
+              enabled: false
+           },
            plotOptions: {
                scatter: {
                    marker: {
-                       radius: 6,
+                       radius: 5,
+                       symbol: 'circle',
                        states: {
                            hover: {
                                enabled: true,
+                               fillColor: '#FEC77C',
                                lineColor: 'rgb(100,100,100)'
                            }
                        }

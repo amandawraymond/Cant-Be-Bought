@@ -5,13 +5,30 @@ angular.module('myApp')
         // Create the chart
         $('#graph1').highcharts({
             chart: {
-                type: 'pie'
+                type: 'pie',
+                backgroundColor: 'white',
+                style: {
+                    font: 'bold 14px "Raleway", sans-serif',
+                }
             },
             title: {
-                text: 'Trafficking Type and Share by Gender'
+                text: 'Trafficking Breakdown by Type and Gender',
+                style: {
+                        color: 'black',
+                        font: '20px "Raleway", sans-serif'
+                    }
             },
+
+            subtitle: {
+                text: 'Click on the graph for a breakdown of type by gender',
+                style: {
+                    color: 'black',
+                    font: '16px "Raleway", sans-serif'
+                }
+            },
+
             xAxis: {
-                type: 'category'
+                type: 'category',
             },
 
             legend: {
@@ -22,6 +39,7 @@ angular.module('myApp')
                 series: {
                     borderWidth: 0,
                     dataLabels: {
+                        color: '#ffffff',
                         enabled: true
                     }
                 }
